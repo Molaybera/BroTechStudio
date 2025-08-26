@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Portfolio</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./stylesheet/form.css">
+    <link rel="icon" href="./image/BroTech-logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Portfolio Website</h1>
+        <p>Fill out this quick form to get your personal portfolio website.</p>
+
+        <form id="booking-form" method="post" action="http://localhost:5000/api/book">
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country *</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+                <label for="courseDetails">Course/Branch/Semester/Working-Profressnal *</label>
+                <input type="text" id="courseDetails" name="courseDetails" required>
+            </div>
+
+            <div class="form-group">
+                <label for="theme">Which Theme would you like to have? *</label>
+                <select id="theme" name="theme" required>
+                    <option value="">Choose</option>
+                    <!-- Basic Designs -->
+                    <option value="Dark-Mode-Brutalist">Dark-Mode-Brutalist</option>
+                    <option value="Cyber-Grid-Neon">Cyber-Grid-Neon</option>
+                    <option value="Blueprint-Sketchbook">Blueprint-Sketchbook</option>
+                    <option value="Kyoto-Zen-Garden">Kyoto-Zen-Garden</option>
+                    <option value="Luxury-Editorial">Luxury-Editorial</option>
+                    <option value="Minimalist-Asymmetric">Minimalist-Asymmetric</option>
+                    <option value="The-Aurora-Glassmorphism">The-Aurora-Glassmorphism</option>
+                    <option value="The-De-Coded-Glitch">The-De-Coded-Glitch</option>
+                    <!-- Premium Designs -->
+                    <option value="Hipper Mona">Hipper Mona</option>
+                    <option value="WorkLoad">WorkLoad</option>
+                    <option value="Next-Gen">Next-Gen</option>
+                    <option value="Magnetic-pull">Magnetic-pull</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What do you want included? (Free of cost)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="resumeDownload"><span class="toggle-visual"></span><span>Resume download button</span></label>
+                    <label><input type="checkbox" name="socialLinks"><span class="toggle-visual"></span><span>Social links</span></label>
+                    <label><input type="checkbox" name="projectsLinks"><span class="toggle-visual"></span><span>Projects Links</span></label>
+                    <label><input type="checkbox" name="manualContactForm"><span class="toggle-visual"></span><span>Manual contact form</span></label>
+                    <label><input type="checkbox" name="ContactButton"><span class="toggle-visual"></span><span>One Click auto mail(no need for manual contact form professional look)</span></label>
+                    <label><input type="checkbox" name="singlePage"><span class="toggle-visual"></span><span>Single page portfolio</span></label>
+                    <label><input type="checkbox" name="deploymentHelp"><span class="toggle-visual"></span><span>Need help with deploying portfolio</span></label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="resumeInfo">Do you have resume/links? or want us to create and add? *</label>
+                <textarea id="resumeInfo" name="resumeInfo" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="createResumeDetails">If you want our team to create your resume pls provide details...</label>
+                <textarea id="createResumeDetails" name="createResumeDetails" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>How soon do you need the portfolio? *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="deliveryTime" value="3-4 days" required> 3-4 days</label>
+                    <label><input type="radio" name="deliveryTime" value="5-6 days"> 5-6 days</label>
+                    <label><input type="radio" name="deliveryTime" value="No Rush"> No Rush</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>More Responsive in other device (additional charge apply)</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="tablets"><span class="toggle-visual"></span><span>Tablets</span></label>
+                    <label><input type="checkbox" name="largeTablets"><span class="toggle-visual"></span><span>Large Tablets</span></label>
+                    <label><input type="checkbox" name="laptop"><span class="toggle-visual"></span><span>Laptop</span></label>
+                    <label><input type="checkbox" name="largeLaptop"><span class="toggle-visual"></span><span>Large Laptop</span></label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Preferred Payment Method *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="paymentMethod" value="UPI" required> UPI</label>
+                    <label><input type="radio" name="paymentMethod" value="PayPal"> PayPal</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="specialRequests">Any notes/special request?</label>
+                <textarea id="specialRequests" name="specialRequests" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="bioDetails">Any Details to show as your Bio in portfolio</label>
+                <textarea id="bioDetails" name="bioDetails" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="projectLinks">Any numbers of links for you projects.</label>
+                <textarea id="projectLinks" name="projectLinks" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="socialMediaLinks">Any numbers of links for you social media.</label>
+                <textarea id="socialMediaLinks" name="socialMediaLinks" rows="4"></textarea>
+            </div>
+
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+        <footer class="footer">
+            <p>&copy; 2025 BroTech Studio. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script id="omnidimension-web-widget" async src="https://backend.omnidim.io/web_widget.js?secret_key=cbb5d2c35e5987b4e7eff323f522cfb2" defer></script>
+    <script src="./javascript/clickBlock.js" defer></script>
+</body>
+</html>

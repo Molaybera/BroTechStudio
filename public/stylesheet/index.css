@@ -1,0 +1,258 @@
+/* =================================================================
+   1. Root Variables & Global Styles
+   ================================================================= */
+:root {
+    --color-primary: #00A9FF;
+    --color-primary-hover: #008DDB;
+    --color-bg: #111827;
+    --color-surface: #1F2937;
+    --color-text-primary: #F9FAFB;
+    --color-text-secondary: #9CA3AF;
+    --color-border: #374151;
+    --font-sans: 'Inter', sans-serif;
+    --border-radius: 0.75rem; /* 12px */
+    --transition-speed: 250ms;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =================================================================
+   2. Header & Navigation
+   ================================================================= */
+.site-header {
+    background-color: rgba(17, 24, 39, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+    color: var(--color-text-primary);
+    background-color: var(--color-border);
+}
+
+.nav-link.cta-button {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-weight: 600;
+}
+.nav-link.cta-button:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-bg);
+}
+
+/* =================================================================
+   3. Hero Section
+   ================================================================= */
+.hero {
+    text-align: center;
+    padding: 6rem 1.5rem;
+    background-image: radial-gradient(circle at top, rgba(0, 169, 255, 0.1), transparent 40%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-headline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    margin: 0 0 1rem 0;
+    letter-spacing: -1.5px;
+}
+
+.hero-subheadline {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    max-width: 650px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.hero-cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-primary, .cta-secondary {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: all var(--transition-speed) ease;
+}
+
+.cta-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+.cta-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+.cta-secondary {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+.cta-secondary:hover {
+    background-color: var(--color-border);
+    transform: translateY(-2px);
+}
+
+/* =================================================================
+   4. How It Works Section
+   ================================================================= */
+.how-it-works, .final-cta, .reviews-link-section {
+    padding: 5rem 1.5rem;
+    text-align: center;
+}
+
+.how-it-works h2, .final-cta h2, .reviews-link-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 3rem 0;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.step-card {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.step-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+}
+
+.step-card p {
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* =================================================================
+   5. Reviews Link Section
+   ================================================================= */
+.reviews-link-section {
+    background-color: var(--color-surface);
+}
+
+.reviews-link-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.reviews-link-section p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+
+/* =================================================================
+   6. Final CTA & Footer
+   ================================================================= */
+.final-cta p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-border);
+}
+
+/* =================================================================
+   7. Responsiveness
+   ================================================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simple hiding for now, can be replaced with a mobile menu */
+    }
+    .hero-headline {
+        font-size: 2.5rem;
+    }
+    .how-it-works h2, .final-cta h2, .reviews-link-section h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,14 @@
+/* ============================ */
+/* tempary discount banner */
+#discount-banner {
+    background: linear-gradient(90deg, #1E3A8A, #3B0764);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 12px 20px; /* Adjusted padding */
+    font-size: 15px;
+    font-weight: 500;
+}
+#discount-banner p {
+    margin: 0;
+}
+/* ============================ */
